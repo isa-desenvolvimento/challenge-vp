@@ -8,7 +8,7 @@ export default createGlobalStyle`
   }
 
   body { 
-    background: ${({ theme }) => theme.background};
-    color: #121214;
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
   }
 `
