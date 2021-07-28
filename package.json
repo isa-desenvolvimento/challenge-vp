@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "test": "jest --collect-coverage",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "babel-plugin-root-import": "^6.6.0",
@@ -16,21 +18,29 @@
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "ts-node": "^10.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@jest/types": "^27.0.6",
+    "@next/bundle-analyzer": "^11.0.1",
     "@types/react": "17.0.15",
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.0.0",
+    "babel-jest": "^27.0.6",
     "commitizen": "^4.2.4",
+    "cypress": "^8.0.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.1",
+    "jest": "^27.0.6",
     "lint-staged": "^11.1.1",
     "prettier": "^2.3.2",
     "typescript": "4.3.5"
