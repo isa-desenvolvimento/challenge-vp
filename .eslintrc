@@ -2,7 +2,6 @@
   "plugins": ["@typescript-eslint"], // Add
   "extends": [
     "next",
-    "jest",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "prettier"
