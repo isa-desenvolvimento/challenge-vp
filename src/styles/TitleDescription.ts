@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const StyletextDescriptionContainer = styled.div`
-  /* font-family: ${({ theme }) => theme.tex}; */
   text-align: justify;
 `
 export const StyleTitle = styled.h5`
