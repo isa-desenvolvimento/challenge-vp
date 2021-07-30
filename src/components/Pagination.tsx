@@ -3,17 +3,15 @@ import {
   StylePaginationNumber,
   StylePaginationContent,
 } from '@/styles/Pagination'
-import React, { useState } from 'react'
+import { PaginationProps } from '@/types/global'
 import { Icon } from './Icon'
 
-export const Pagination = ({ prev, next, total }) => {
-  const [current, SetCurrent] = useState(1)
-
+export const Pagination = ({ prev, next, total }: PaginationProps) => {
   return (
     <StylePaginationContainer>
       <StylePaginationContent>
         <Icon faIcon="chevron-left"></Icon>
-        <StylePaginationNumber>{`${current} - ${total}`}</StylePaginationNumber>
+        <StylePaginationNumber>{`${prev} - ${next}`}</StylePaginationNumber>
         <Icon faIcon="chevron-right"></Icon>
       </StylePaginationContent>
 

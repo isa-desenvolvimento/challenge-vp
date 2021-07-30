@@ -5,6 +5,8 @@ import {
 import { Button } from '@/components/Button'
 import { Combobox } from '@/components/Combobox'
 import { InputComponent } from '@/components/InputComponent'
+import { BaseForm } from './BaseForm'
+import { FormikValues } from 'formik'
 
 const options = [
   { value: 'John', id: 1 },
@@ -12,19 +14,35 @@ const options = [
 ]
 
 export const SearchContainer = () => {
-  const onChange = () => {}
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onSubmit = (data: FormikValues, action: any) => {
+    console.log(data, action)
+  }
 
-  return (
+  const renderBaseForm = () => (
     <StyleSearchContainer>
       <InputComponent
+        name="search"
         iconProps="search"
         placeholder="Pesquisa Livre"
-        onChange={onChange}
       ></InputComponent>
-      <Combobox options={options} placeholder="Status" />
+      <Combobox options={options} placeholder="Status" name="status" />
       <StyleButtonContainer>
-        <Button primary>Buscar</Button>
+        <Button type="submit" primary>
+          Buscar
+        </Button>
       </StyleButtonContainer>
     </StyleSearchContainer>
+  )
+
+  return (
+    <BaseForm
+      baseForm={renderBaseForm()}
+      onSubmit={onSubmit}
+      initialValues={{
+        search: '',
+        status: '',
+      }}
+    />
   )
 }

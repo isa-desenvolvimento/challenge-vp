@@ -1,3 +1,4 @@
+import { ComboboxProps } from '@/types/global'
 import styled from 'styled-components'
 
 export const DropdownWrapper = styled.div`
@@ -6,7 +7,10 @@ export const DropdownWrapper = styled.div`
   justify-content: flex-start;
 `
 
-export const StyledSelect = styled.select`
+export const StyledSelect = styled.select.attrs((props: ComboboxProps) => ({
+  primary: props.primary,
+  size: props.size,
+}))<ComboboxProps>`
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -28,7 +32,11 @@ export const StyledLabel = styled.label`
   margin-bottom: 1rem;
 `
 
-export const StyledOption = styled.option`
+export const StyledOption = styled.option.attrs((props: ComboboxProps) => ({
+  primary: props.primary,
+  size: props.size,
+}))<ComboboxProps>`
+  background: ${({ theme, primary }) =>
+    primary ? theme.pallet.white : theme.colors.input.main};
   color: ${({ theme }) => theme.colors.input.contrast};
-  background: ${({ theme }) => theme.colors.input.main} !important;
 `

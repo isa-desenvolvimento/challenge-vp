@@ -1,6 +1,12 @@
+import { InputComponentProps } from '@/types/global'
 import styled from 'styled-components'
 
-export const StyleInputContainer = styled.div`
+export const StyleInputContainer = styled.div.attrs(
+  (props: InputComponentProps) => ({
+    primary: props.primary,
+    size: props.size,
+  })
+)<InputComponentProps>`
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;

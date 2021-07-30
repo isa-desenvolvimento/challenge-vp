@@ -1,5 +1,4 @@
 import { StyAmount, StyItemList, StyleListContainer } from '@/styles/List'
-import React from 'react'
 import { TagState } from '@/components/TagState'
 import { TitleDescription } from './TitleDescription'
 import { ItemProps, ListProps } from '@/types/global'
@@ -8,7 +7,7 @@ import { formatMoeda } from '@/utils/formatNumer'
 export const List = ({ withBorder, withTag, items }: ListProps) => {
   const renderItems = () => {
     return items.map((item: ItemProps) => (
-      <StyItemList border={withBorder} key={item.id}>
+      <StyItemList withBorder={withBorder} key={item.id}>
         <TitleDescription
           title={item.title}
           description={item.description}

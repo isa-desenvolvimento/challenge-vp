@@ -5,14 +5,12 @@ import {
   StyleCardHeader,
 } from '@/styles/Card'
 import { CardProps } from '@/types/global'
-import React from 'react'
 
 export const Card = ({
   header,
   content,
   footer,
   primary,
-  display,
   height,
 }: CardProps) => {
   const renderHeader = () =>
@@ -27,7 +25,7 @@ export const Card = ({
     footer && <StyleCardFooter primary={primary}>{footer}</StyleCardFooter>
 
   return (
-    <StyleCardContainer display={display}>
+    <StyleCardContainer>
       {renderHeader()}
       {renderContent()}
       {renderFooter()}

@@ -1,6 +1,10 @@
+import { ButtonProps } from '@/types/global'
 import styled from 'styled-components'
 
-export const StyleButton = styled.button`
+export const StyleButton = styled.button.attrs((props: ButtonProps) => ({
+  primary: props.primary,
+  size: props.size,
+}))<ButtonProps>`
   background: ${({ theme, primary }) =>
     primary ? theme.colors.primary.main : theme.colors.secondary.main};
   color: ${({ theme, primary }) =>

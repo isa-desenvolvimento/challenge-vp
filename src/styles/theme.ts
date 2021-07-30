@@ -1,5 +1,3 @@
-import { text } from '@fortawesome/fontawesome-svg-core'
-
 const color = {
   white: '#ffff',
   mariner: '#446996',
@@ -59,7 +57,7 @@ const theme = {
     lg: 256,
   },
   borderRadius: '4px',
-  defineWidth: (size: string) => {
+  defineWidth: (size: string | number | undefined) => {
     switch (size) {
       case 'sm':
         return '10%'

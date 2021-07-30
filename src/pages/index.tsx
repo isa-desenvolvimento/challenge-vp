@@ -5,22 +5,16 @@ import {
   StyleSearchContainer,
   StyleHomeContent,
   StyleFooterContainer,
-  StyleHeadList,
 } from '@/styles/Home'
 
 import { Card } from '@/components/Card'
 import { Button } from '@/components/Button'
 import { SearchContainer } from '@/components/SearchContainer'
-import { Combobox } from '@/components/Combobox'
 import { List } from '@/components/List'
-import React from 'react'
 import { Pagination } from '@/components/Pagination'
-import { Form } from '@/components/Form'
-
-const options = [
-  { value: 'John', id: 1 },
-  { value: 'Doe', id: 2 },
-]
+import { FormComponent } from '@/components/FormComponent'
+import React from 'react'
+import { FormHeaderList } from '@/components/FormHeaderList'
 
 const items = [
   {
@@ -53,7 +47,7 @@ export default function Home() {
   const renderHeader = () => {
     return (
       <StyleSearchContainer>
-        <Card header={<SearchContainer />} display="block" />
+        <Card header={<SearchContainer />} />
       </StyleSearchContainer>
     )
   }
@@ -63,11 +57,7 @@ export default function Home() {
       <StyleListContainer>
         <Card
           primary
-          header={
-            <StyleHeadList>
-              <Combobox options={options} placeholder="Status" primary />
-            </StyleHeadList>
-          }
+          header={<FormHeaderList />}
           content={<List withBorder withTag items={items} />}
           footer={<Pagination total={items.length} next={2} prev={4} />}
         />
@@ -78,7 +68,11 @@ export default function Home() {
   const renderForm = () => {
     return (
       <StyleFormContainer>
-        <Card header={'Título Generico'} content={<Form />} height={'57vh'} />
+        <Card
+          header={'Título Generico'}
+          content={<FormComponent />}
+          height={'57vh'}
+        />
       </StyleFormContainer>
     )
   }

@@ -1,7 +1,6 @@
 import { Icon } from '@/components/Icon'
 import { StyleButton } from '@/styles/Button'
 import { ButtonProps } from '@/types/global'
-import React from 'react'
 
 export const Button = ({
   iconProps,
@@ -9,11 +8,12 @@ export const Button = ({
   onClick,
   children,
   size,
+  type,
 }: ButtonProps) => {
   const renderIcon = () => iconProps && <Icon faIcon={iconProps}></Icon>
 
   return (
-    <StyleButton onClick={onClick} primary={primary} size={size}>
+    <StyleButton onClick={onClick} primary={primary} size={size} type={type}>
       {renderIcon()}
       {children}
     </StyleButton>

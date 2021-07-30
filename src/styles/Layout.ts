@@ -15,4 +15,8 @@ export const StyleContainer = styled.main`
   font-family: 'Nunito';
 
   overflow: hidden;
+
+  @media screen and (max-width: 600px) {
+    overflow-y: scroll;
+  }
 `

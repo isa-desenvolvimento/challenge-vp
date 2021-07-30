@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type ChildrenProps = {
   children?: any | any[]
 }
@@ -19,19 +20,18 @@ export type SizeProps = {
 export type InputComponentProps = {
   iconProps?: string
   placeholder?: string
-  onChange: () => void
   size?: string
-  value?: any
   primary?: boolean
-  name?: string
+  name: string
 }
 
 export type ButtonProps = {
   iconProps?: string
-  onClick: () => void
+  onClick?: () => void
   primary?: boolean
   children?: any | any[]
   size?: string
+  type?: 'button' | 'submit' | 'reset' | undefined
 }
 
 export type ControlComboBoxProps = {
@@ -43,6 +43,8 @@ export type ComboboxProps = {
   options?: any[]
   placeholder?: string
   primary?: boolean
+  size?: string
+  name: string
 }
 
 export type CardProps = {
@@ -50,7 +52,6 @@ export type CardProps = {
   content?: any | any[]
   footer?: any | any[]
   primary?: boolean
-  display?: string
   styles?: any | any[]
   height?: string
 }
@@ -66,8 +67,7 @@ export type TagStateProps = {
   status: string
 }
 
-export type ItemProps = {
-  id: number
+export type InitialProps = {
   title?: string
   description?: string
   date?: string
@@ -75,8 +75,23 @@ export type ItemProps = {
   status: string
 }
 
+export type ItemProps = {
+  id: number
+  title?: string
+  description?: string
+  date?: string
+  amount?: number
+  status: string
+}
+
 export type ListProps = {
   withBorder?: boolean
   withTag?: boolean
   items: ItemProps[]
+}
+
+export type PaginationProps = {
+  next?: number
+  prev?: number
+  total?: number
 }

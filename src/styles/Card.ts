@@ -1,3 +1,4 @@
+import { CardProps } from '@/types/global'
 import styled from 'styled-components'
 
 export const StyleCardContainer = styled.div`
@@ -7,21 +8,31 @@ export const StyleCardContainer = styled.div`
 
   text-align: center;
   overflow: hidden;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1rem;
+  }
 `
 
-export const StyleCardHeader = styled.div`
+export const StyleCardHeader = styled.div.attrs((props: CardProps) => ({
+  primary: props.primary,
+}))<CardProps>`
   background: ${({ theme, primary }) =>
     primary ? theme.pallet.gainsboro : theme.pallet.white};
   padding: 0.5rem;
 `
 
-export const StyleCardContent = styled.div`
+export const StyleCardContent = styled.div.attrs((props: CardProps) => ({
+  height: props.height,
+}))<CardProps>`
   background: ${({ theme }) => theme.pallet.white};
   height: ${({ height }) => (height ? height : '45vh')};
   overflow-y: scroll;
 `
 
-export const StyleCardFooter = styled.div`
+export const StyleCardFooter = styled.div.attrs((props: CardProps) => ({
+  primary: props.primary,
+}))<CardProps>`
   background: ${({ theme, primary }) =>
     primary ? theme.pallet.gainsboro : theme.pallet.white};
   padding: 0.5rem;

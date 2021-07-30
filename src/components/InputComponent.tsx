@@ -1,28 +1,27 @@
 import { Icon } from '@/components/Icon'
 import { StyleInput, StyleInputContainer } from '@/styles/InputComponent'
 import { InputComponentProps } from '@/types/global'
+import { useField } from 'formik'
 
 export const InputComponent = ({
   iconProps,
   placeholder,
   size,
-  value,
   primary,
   name,
-  onChange,
   ...props
 }: InputComponentProps) => {
+  const [field, meta] = useField(name)
+
   const renderIcon = () => iconProps && <Icon faIcon={iconProps}></Icon>
 
   return (
-    <StyleInputContainer size={size}>
+    <StyleInputContainer size={size} primary={primary} name={name}>
       {renderIcon()}
       <StyleInput
-        value={value}
         placeholder={placeholder}
-        onChange={onChange}
-        name={name}
-        primary={primary}
+        {...meta}
+        {...field}
         {...props}
       ></StyleInput>
     </StyleInputContainer>
