@@ -3,6 +3,7 @@ import React from 'react'
 import { TagState } from '@/components/TagState'
 import { TitleDescription } from './TitleDescription'
 import { ItemProps, ListProps } from '@/types/global'
+import { formatMoeda } from '@/utils/formatNumer'
 
 export const List = ({ withBorder, withTag, items }: ListProps) => {
   const renderItems = () => {
@@ -14,7 +15,7 @@ export const List = ({ withBorder, withTag, items }: ListProps) => {
           date={item.date}
         />
         {withTag && <TagState status={item.status}>{item.status}</TagState>}
-        <StyAmount>{item.amount} </StyAmount>
+        <StyAmount>{formatMoeda(item.amount)} </StyAmount>
       </StyItemList>
     ))
   }
