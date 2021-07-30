@@ -1,4 +1,4 @@
-import { StyItemList, StyleListContainer } from '@/styles/List'
+import { StyAmount, StyItemList, StyleListContainer } from '@/styles/List'
 import React from 'react'
 import { TagState } from '@/components/TagState'
 import { TitleDescription } from './TitleDescription'
@@ -14,6 +14,7 @@ export const List = ({ withBorder, withTag, items }: ListProps) => {
           date={item.date}
         />
         {withTag && <TagState status={item.status}>{item.status}</TagState>}
+        <StyAmount>{item.amount} </StyAmount>
       </StyItemList>
     ))
   }

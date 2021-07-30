@@ -19,4 +19,5 @@ export const StyleTagState = styled.div`
   left: 50%;
   transform: translate(-50%);
   width: 8rem;
+  top: 0;
 `

@@ -2,6 +2,12 @@ import styled from 'styled-components'
 
 export const StyleListContainer = styled.div``
 
+export const StyAmount = styled.span`
+  margin-top: 1rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.active.contrast};
+`
+
 export const StyItemList = styled.div`
   position: relative;
   width: 100%;
@@ -15,4 +21,8 @@ export const StyItemList = styled.div`
   :hover {
     background-color: ${({ theme }) => theme.colors.background};
   }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 `
