@@ -7,10 +7,16 @@ export const StyleAncor = styled.a`
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.active.main};
+  color: ${({ theme }) => theme.colors.active.contrast};
   font-size: ${({ theme }) => theme.fontSize.md};
 
+  :hover {
+    background-color: ${({ theme }) => theme.colors.active.main};
+    color: ${({ theme }) => theme.colors.active.contrast};
+  }
+
   :active {
+    background-color: ${({ theme }) => theme.colors.active.main};
     color: ${({ theme }) => theme.colors.active.contrast};
   }
 `

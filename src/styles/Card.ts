@@ -17,7 +17,7 @@ export const StyleCardHeader = styled.div`
 
 export const StyleCardContent = styled.div`
   background: ${({ theme }) => theme.pallet.white};
-  height: ${({ height }) => (height ? height : '50vh')};
+  height: ${({ height }) => (height ? height : '45vh')};
   overflow-y: scroll;
 `
 

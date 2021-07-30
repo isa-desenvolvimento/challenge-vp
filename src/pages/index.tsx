@@ -78,7 +78,7 @@ export default function Home() {
   const renderForm = () => {
     return (
       <StyleFormContainer>
-        <Card header={'Título Generico'} content={<Form />} height={'54vh'} />
+        <Card header={'Título Generico'} content={<Form />} height={'57vh'} />
       </StyleFormContainer>
     )
   }
