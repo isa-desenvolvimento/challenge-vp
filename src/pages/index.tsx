@@ -15,6 +15,7 @@ import { Combobox } from '@/components/Combobox'
 import { List } from '@/components/List'
 import React from 'react'
 import { Pagination } from '@/components/Pagination'
+import { Form } from '@/components/Form'
 
 const options = [
   { value: 'John', id: 1 },
@@ -77,7 +78,7 @@ export default function Home() {
   const renderForm = () => {
     return (
       <StyleFormContainer>
-        <Card header={'form'} content={'form'} height={'54vh'} />
+        <Card header={'Título Generico'} content={<Form />} height={'54vh'} />
       </StyleFormContainer>
     )
   }

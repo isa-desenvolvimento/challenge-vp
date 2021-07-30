@@ -21,6 +21,9 @@ export type InputComponentProps = {
   placeholder?: string
   onChange: () => void
   size?: string
+  value?: any
+  primary?: boolean
+  name?: string
 }
 
 export type ButtonProps = {

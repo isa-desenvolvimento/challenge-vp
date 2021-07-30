@@ -6,14 +6,25 @@ export const InputComponent = ({
   iconProps,
   placeholder,
   size,
+  value,
+  primary,
+  name,
   onChange,
+  ...props
 }: InputComponentProps) => {
   const renderIcon = () => iconProps && <Icon faIcon={iconProps}></Icon>
 
   return (
     <StyleInputContainer size={size}>
       {renderIcon()}
-      <StyleInput placeholder={placeholder} onChange={onChange}></StyleInput>
+      <StyleInput
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+        name={name}
+        primary={primary}
+        {...props}
+      ></StyleInput>
     </StyleInputContainer>
   )
 }

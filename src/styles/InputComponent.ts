@@ -6,17 +6,22 @@ export const StyleInputContainer = styled.div`
   gap: 1rem;
   padding: 1rem;
   text-overflow: ellipsis;
-  background: ${({ theme }) => theme.colors.input.main};
+  background: ${({ theme, primary }) =>
+    primary ? theme.pallet.white : theme.colors.input.main};
+  color: ${({ theme }) => theme.colors.input.contrast};
   border: none;
   border-radius: ${({ theme }) => theme.borderRadius};
   width: ${({ theme, size }) => theme.defineWidth(size)};
+  margin: 1rem;
+
+  @media screen and (max-width: 600px) {
+    display: revert;
+  }
 `
 
 export const StyleInput = styled.input`
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 100%;
   color: ${({ theme, color }) => (color ? color : theme.colors.input.contrast)};
   background: none;
   border: none;
