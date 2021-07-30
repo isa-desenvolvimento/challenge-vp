@@ -13,6 +13,8 @@ import { Button } from '@/components/Button'
 import { SearchContainer } from '@/components/SearchContainer'
 import { Combobox } from '@/components/Combobox'
 import { List } from '@/components/List'
+import React from 'react'
+import { Pagination } from '@/components/Pagination'
 
 const options = [
   { value: 'John', id: 1 },
@@ -66,7 +68,7 @@ export default function Home() {
             </StyleHeadList>
           }
           content={<List withBorder withTag items={items} />}
-          footer={'list'}
+          footer={<Pagination total={items.length} next={2} prev={4} />}
         />
       </StyleListContainer>
     )

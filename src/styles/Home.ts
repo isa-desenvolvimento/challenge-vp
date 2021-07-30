@@ -9,8 +9,7 @@ export const StyleHomeContainer = styled.div`
 export const StyleHomeContent = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: auto auto;
-
+  grid-auto-columns: 35% 45%;
   grid-template-areas: 'list form';
   margin: 2rem;
 
