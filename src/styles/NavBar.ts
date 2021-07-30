@@ -5,11 +5,12 @@ export const StyleNavContainer = styled.div`
   grid-area: nav;
 
   overflow: hidden;
-  background-color: ${({ theme }) => theme.colors.navbar};
-  box-shadow: 0px 1px 8px #dedede;
+  background-color: ${({ theme }) => theme.colors.navbar.main};
+  box-shadow: 0px 1px 5px #cec8c8;
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 1;
 `
 
 export const StyleNavItem = styled(LinkItem)`

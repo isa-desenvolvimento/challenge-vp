@@ -1,21 +1,65 @@
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document'
+import theme from '@/styles/theme'
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document'
+import React from 'react'
+import { ServerStyleSheet } from 'styled-components'
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
+    const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
-    ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: (App) => App,
-        enhanceComponent: (Component) => Component,
-      })
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        })
 
-    const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      }
+    } finally {
+      sheet.seal()
+    }
+  }
 
-    return initialProps
+  render() {
+    return (
+      <html lang="pt">
+        <Head>
+          <meta charSet="utf-8" />
+          <meta name="theme-color" content={theme.colors.primary.main} />
+          <title>Challenge VP</title>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          />
+          <link
+            rel="icon"
+            href="https://vamosparcelar.com.br/wp-content/uploads/2020/09/cropped-Fundo-transparente-1900x1900-crop-32x32.png"
+            sizes="32x32"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    )
   }
 }
-
-export default MyDocument

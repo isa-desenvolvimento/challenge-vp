@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const StyleContainer = styled.main`
   height: 100vh;
-  color: white;
 
   display: grid;
   grid-template-rows: 4rem auto;
@@ -16,5 +15,4 @@ export const StyleContainer = styled.main`
   font-family: 'Nunito';
 
   overflow: hidden;
-  text-align: center;
 `
