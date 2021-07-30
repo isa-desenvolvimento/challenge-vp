@@ -51,3 +51,29 @@ export type CardProps = {
   styles?: any | any[]
   height?: string
 }
+
+export type TitleDescriptionProps = {
+  title?: string
+  description?: string
+  date?: string
+}
+
+export type TagStateProps = {
+  children?: any | any[]
+  status: string
+}
+
+export type ItemProps = {
+  id: number
+  title?: string
+  description?: string
+  date?: string
+  amount?: string
+  status: string
+}
+
+export type ListProps = {
+  withBorder?: boolean
+  withTag?: boolean
+  items: ItemProps[]
+}

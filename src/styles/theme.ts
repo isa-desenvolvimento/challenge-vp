@@ -13,6 +13,7 @@ const color = {
   comet: '#60647C',
   scooter: '#36a4a8',
   gainsboro: '#E3E3E3',
+  emerald: '#6CD188',
 }
 
 const theme = {

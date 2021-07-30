@@ -17,8 +17,8 @@ export const StyleCardHeader = styled.div`
 
 export const StyleCardContent = styled.div`
   background: ${({ theme }) => theme.pallet.white};
-  padding: 0.5rem;
   height: ${({ height }) => (height ? height : '50vh')};
+  overflow-y: scroll;
 `
 
 export const StyleCardFooter = styled.div`
