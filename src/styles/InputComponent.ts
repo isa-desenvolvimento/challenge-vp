@@ -1,6 +1,8 @@
 import { InputComponentProps } from '@/types/global'
 import styled from 'styled-components'
 
+export const StyleContainer = styled.label``
+
 export const StyleInputContainer = styled.div.attrs(
   (props: InputComponentProps) => ({
     primary: props.primary,
@@ -31,5 +33,10 @@ export const StyleInput = styled.input`
   color: ${({ theme, color }) => (color ? color : theme.colors.input.contrast)};
   background: none;
   border: none;
+  text-overflow: ellipsis;
+`
+
+export const StyleInputLabel = styled.label`
+  color: ${({ theme, color }) => (color ? color : theme.colors.text)};
   text-overflow: ellipsis;
 `

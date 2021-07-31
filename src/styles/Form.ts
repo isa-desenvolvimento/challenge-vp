@@ -5,6 +5,7 @@ export const StyleFormContainer = styled.div`
   gap: 0.4rem;
   justify-content: center;
   padding: 3rem;
+  text-align: start;
 
   @media screen and (max-width: 600px) {
     display: revert;

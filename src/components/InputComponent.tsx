@@ -1,7 +1,13 @@
 import { Icon } from '@/components/Icon'
-import { StyleInput, StyleInputContainer } from '@/styles/InputComponent'
+import {
+  StyleContainer,
+  StyleInput,
+  StyleInputContainer,
+  StyleInputLabel,
+} from '@/styles/InputComponent'
 import { InputComponentProps } from '@/types/global'
 import { useField } from 'formik'
+import React from 'react'
 
 export const InputComponent = ({
   iconProps,
@@ -9,6 +15,7 @@ export const InputComponent = ({
   size,
   primary,
   name,
+  label,
   ...props
 }: InputComponentProps) => {
   const [field, meta] = useField(name)
@@ -16,14 +23,17 @@ export const InputComponent = ({
   const renderIcon = () => iconProps && <Icon faIcon={iconProps}></Icon>
 
   return (
-    <StyleInputContainer size={size} primary={primary} name={name}>
-      {renderIcon()}
-      <StyleInput
-        placeholder={placeholder}
-        {...meta}
-        {...field}
-        {...props}
-      ></StyleInput>
-    </StyleInputContainer>
+    <StyleContainer>
+      {label && <StyleInputLabel>{label}</StyleInputLabel>}
+      <StyleInputContainer size={size} primary={primary} name={name}>
+        {renderIcon()}
+        <StyleInput
+          placeholder={placeholder}
+          {...meta}
+          {...field}
+          {...props}
+        ></StyleInput>
+      </StyleInputContainer>
+    </StyleContainer>
   )
 }

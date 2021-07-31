@@ -12,6 +12,7 @@ import {
 import GlobalStyles from '@/styles/global'
 import theme from '@/styles/theme'
 import { Layout } from '@/components/Layout'
+import { TransactionContextProvider } from '@/context/TransactionContext'
 
 library.add(faSearch, faChevronLeft, faChevronRight)
 

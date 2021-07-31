@@ -1,3 +1,5 @@
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+
 import {
   StyleFormContainer,
   StyleHomeContainer,
@@ -15,6 +17,9 @@ import { Pagination } from '@/components/Pagination'
 import { FormComponent } from '@/components/FormComponent'
 import React from 'react'
 import { FormHeaderList } from '@/components/FormHeaderList'
+import { getTransaction } from '@/servers/transactions'
+import { ItemProps } from '@/types/global'
+import { TransactionContextProvider } from '@/context/TransactionContext'
 
 const items = [
   {
@@ -69,7 +74,7 @@ export default function Home() {
     return (
       <StyleFormContainer>
         <Card
-          header={'Título Generico'}
+          header={'Título genérico'}
           content={<FormComponent />}
           height={'57vh'}
         />
@@ -96,3 +101,15 @@ export default function Home() {
     </StyleHomeContainer>
   )
 }
+
+// export async function getStaticProps() {
+//   const transactions = await getTransaction()
+
+//   console.log(transactions.data.data)
+
+//   return {
+//     props: {
+//       transactions: transactions.data.data,
+//     },
+//   }
+// }

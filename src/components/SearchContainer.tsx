@@ -9,12 +9,12 @@ import { BaseForm } from './BaseForm'
 import { FormikValues } from 'formik'
 
 const options = [
-  { value: 'John', id: 1 },
-  { value: 'Doe', id: 2 },
+  { value: 'Done', id: 1 },
+  { value: 'Warning', id: 2 },
+  { value: 'Error', id: 3 },
 ]
 
 export const SearchContainer = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = (data: FormikValues, action: any) => {
     console.log(data, action)
   }

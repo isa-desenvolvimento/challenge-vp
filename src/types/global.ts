@@ -1,3 +1,5 @@
+import { ElementRef, FormEvent } from 'react'
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type ChildrenProps = {
   children?: any | any[]
@@ -23,6 +25,7 @@ export type InputComponentProps = {
   size?: string
   primary?: boolean
   name: string
+  label?: string
 }
 
 export type ButtonProps = {
@@ -45,6 +48,7 @@ export type ComboboxProps = {
   primary?: boolean
   size?: string
   name: string
+  onChange?: () => React.FormEvent<HTMLInputElement>
 }
 
 export type CardProps = {

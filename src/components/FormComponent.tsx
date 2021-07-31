@@ -11,12 +11,21 @@ export const FormComponent = () => {
 
   const renderBaseForm = () => (
     <StyleFormContainer>
-      <InputComponent placeholder="R$ 0.0" name="title" />
-      <InputComponent placeholder="R$ 0.0" name="description" />
-      <InputComponent placeholder="R$ 0.0" name="date" />
-      <InputComponent placeholder="R$ 0.0" name="amount" />
-      <InputComponent placeholder="R$ 0.0" name="status" />
-      <button type="submit">submit</button>
+      <InputComponent
+        placeholder="R$ 0.0"
+        name="title"
+        label="Formulário genérico"
+      />
+      <InputComponent
+        placeholder="R$ 0.0"
+        name="description"
+        label="Formulário genérico"
+      />
+      <InputComponent
+        placeholder="R$ 0.0"
+        name="date"
+        label="Formulário genérico"
+      />
     </StyleFormContainer>
   )
 
