@@ -26,7 +26,7 @@ export const StyleCardContent = styled.div.attrs((props: CardProps) => ({
   height: props.height,
 }))<CardProps>`
   background: ${({ theme }) => theme.pallet.white};
-  height: ${({ height }) => (height ? height : '45vh')};
+  height: ${({ height }) => (height ? height : '40vh')};
   overflow-y: scroll;
 `
 

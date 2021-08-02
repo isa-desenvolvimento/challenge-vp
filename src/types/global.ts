@@ -1,4 +1,4 @@
-import { ElementRef, FormEvent } from 'react'
+import { FormEvent } from 'react'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type ChildrenProps = {
@@ -30,7 +30,7 @@ export type InputComponentProps = {
 
 export type ButtonProps = {
   iconProps?: string
-  onClick?: () => void
+  onClick?: (() => FormEvent<HTMLInputElement>) | undefined
   primary?: boolean
   children?: any | any[]
   size?: string
@@ -43,12 +43,13 @@ export type ControlComboBoxProps = {
 }
 
 export type ComboboxProps = {
-  options?: any[]
+  options?: OptionsProps[]
   placeholder?: string
   primary?: boolean
   size?: string
   name: string
-  onChange?: () => React.FormEvent<HTMLInputElement>
+  isFormik?: boolean | undefined
+  onChange?: (e: EventProps) => void
 }
 
 export type CardProps = {
@@ -98,4 +99,18 @@ export type PaginationProps = {
   next?: number
   prev?: number
   total?: number
+}
+
+export type OptionsProps = {
+  id: number | string
+  value: number | string
+}
+
+export type SearchContainerProps = {
+  options?: OptionsProps[]
+  onSubmit: (e: EventProps) => void
+}
+
+export type EventProps = {
+  e: (() => FormEvent<HTMLInputElement>) | undefined
 }

@@ -15,9 +15,11 @@ const TransactionContext = createContext<TransactionContextProps>(DEFAULT_VALUE)
 
 const TransactionContextProvider: React.FC = ({ children }) => {
   const [state, setState] = useState(DEFAULT_VALUE.state)
+  console.log('context', state)
+
   return (
     <TransactionContext.Provider value={{ state, setState }}>
-      {{ children }}
+      {children}
     </TransactionContext.Provider>
   )
 }

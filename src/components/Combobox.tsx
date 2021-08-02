@@ -2,7 +2,6 @@ import { ComboboxProps } from '@/types/global'
 
 import { DropdownWrapper, StyledSelect, StyledOption } from '@/styles/Combobox'
 import { useField } from 'formik'
-import { useState } from 'react'
 
 export const Combobox = ({
   options,
@@ -10,14 +9,30 @@ export const Combobox = ({
   primary,
   onChange,
   name,
+  isFormik,
 }: ComboboxProps) => {
   const [field, meta] = useField(name)
-  const [option, setOption] = useState({ value: '' })
 
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-    console.log(e)
+  const renderSelection = () => {
+    if (isFormik) {
+      return (
+        <StyledSelect primary={primary} {...field} {...meta}>
+          <StyledOption selected value="" name={`${name}.defaultValue`}>
+            {placeholder}
+          </StyledOption>
+          {renderOptions()}
+        </StyledSelect>
+      )
+    }
 
-    setOption({ value: 'description' })
+    return (
+      <StyledSelect onChange={onChange} primary={primary}>
+        <StyledOption selected value="" name={`${name}.defaultValue`}>
+          {placeholder}
+        </StyledOption>
+        {renderOptions()}
+      </StyledSelect>
+    )
   }
 
   const renderOptions = () => {
@@ -33,19 +48,5 @@ export const Combobox = ({
     )
   }
 
-  return (
-    <DropdownWrapper>
-      <StyledSelect
-        primary={primary}
-        {...field}
-        {...meta}
-        onChange={handleChange}
-      >
-        <StyledOption selected value="" name={`${name}.defaultValue`}>
-          {placeholder}
-        </StyledOption>
-        {renderOptions()}
-      </StyledSelect>
-    </DropdownWrapper>
-  )
+  return <DropdownWrapper>{renderSelection()}</DropdownWrapper>
 }

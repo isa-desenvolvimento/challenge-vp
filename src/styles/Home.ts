@@ -11,7 +11,7 @@ export const StyleHomeContent = styled.div`
   grid-gap: 1rem;
   grid-auto-columns: 35% 45%;
   grid-template-areas: 'list form';
-  margin: 2rem;
+  margin: 0 2rem;
 
   @media screen and (max-width: 600px) {
     display: revert;

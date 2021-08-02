@@ -6,19 +6,12 @@ import { Button } from '@/components/Button'
 import { Combobox } from '@/components/Combobox'
 import { InputComponent } from '@/components/InputComponent'
 import { BaseForm } from './BaseForm'
-import { FormikValues } from 'formik'
+import { SearchContainerProps } from '@/types/global'
 
-const options = [
-  { value: 'Done', id: 1 },
-  { value: 'Warning', id: 2 },
-  { value: 'Error', id: 3 },
-]
-
-export const SearchContainer = () => {
-  const onSubmit = (data: FormikValues, action: any) => {
-    console.log(data, action)
-  }
-
+export const SearchContainer = ({
+  options,
+  onSubmit,
+}: SearchContainerProps) => {
   const renderBaseForm = () => (
     <StyleSearchContainer>
       <InputComponent
@@ -26,7 +19,7 @@ export const SearchContainer = () => {
         iconProps="search"
         placeholder="Pesquisa Livre"
       ></InputComponent>
-      <Combobox options={options} placeholder="Status" name="status" />
+      <Combobox options={options} placeholder="Status" name="status" isFormik />
       <StyleButtonContainer>
         <Button type="submit" primary>
           Buscar

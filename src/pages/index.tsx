@@ -1,5 +1,3 @@
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
-
 import {
   StyleFormContainer,
   StyleHomeContainer,
@@ -15,11 +13,12 @@ import { SearchContainer } from '@/components/SearchContainer'
 import { List } from '@/components/List'
 import { Pagination } from '@/components/Pagination'
 import { FormComponent } from '@/components/FormComponent'
-import React from 'react'
+import { useContext, SyntheticEvent } from 'react'
 import { FormHeaderList } from '@/components/FormHeaderList'
-import { getTransaction } from '@/servers/transactions'
-import { ItemProps } from '@/types/global'
-import { TransactionContextProvider } from '@/context/TransactionContext'
+import TransactionContext from '@/context/TransactionContext'
+import { FormikValues } from 'formik/dist/types'
+import { ElementProps } from '@/types/contex'
+import { EventProps } from '@/types/global'
 
 const items = [
   {
@@ -48,11 +47,51 @@ const items = [
   },
 ]
 
+const options = [
+  { value: 'Done', id: 1 },
+  { value: 'Warning', id: 2 },
+  { value: 'Error', id: 3 },
+]
+
+const optionsHeaderList = [
+  { value: 'Title', id: 1 },
+  { value: 'Description', id: 2 },
+  { value: 'Status', id: 3 },
+]
+
 export default function Home() {
+  const { setState } = useContext(TransactionContext)
+
+  const onSubmitSearchContainer = (data: FormikValues) => {
+    setState((prev: ElementProps) => ({
+      ...prev,
+      formHeader: { input: data.search, status: data.status },
+    }))
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const setOrderBy = (data: any) => {
+    setState((prev: ElementProps) => ({
+      ...prev,
+      formLists: { orderby: data.target.value },
+    }))
+  }
+
+  const onClickButtonFooter = () => {
+    console.log('onClickButtonFooter')
+  }
+
   const renderHeader = () => {
     return (
       <StyleSearchContainer>
-        <Card header={<SearchContainer />} />
+        <Card
+          header={
+            <SearchContainer
+              options={options}
+              onSubmit={onSubmitSearchContainer}
+            />
+          }
+        />
       </StyleSearchContainer>
     )
   }
@@ -62,7 +101,9 @@ export default function Home() {
       <StyleListContainer>
         <Card
           primary
-          header={<FormHeaderList />}
+          header={
+            <FormHeaderList onSubmit={setOrderBy} options={optionsHeaderList} />
+          }
           content={<List withBorder withTag items={items} />}
           footer={<Pagination total={items.length} next={2} prev={4} />}
         />
@@ -76,7 +117,7 @@ export default function Home() {
         <Card
           header={'Título genérico'}
           content={<FormComponent />}
-          height={'57vh'}
+          height={'55vh'}
         />
       </StyleFormContainer>
     )
@@ -85,7 +126,9 @@ export default function Home() {
   const renderFooter = () => {
     return (
       <StyleFooterContainer>
-        <Button size="md">Acão Principal</Button>
+        <Button size="md" onClick={onClickButtonFooter}>
+          Acão Principal
+        </Button>
       </StyleFooterContainer>
     )
   }
