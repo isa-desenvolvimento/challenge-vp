@@ -10,7 +10,7 @@ export const StyleInputContainer = styled.div.attrs(
   })
 )<InputComponentProps>`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   gap: 1rem;
   padding: 1rem;
   text-overflow: ellipsis;
@@ -21,10 +21,6 @@ export const StyleInputContainer = styled.div.attrs(
   border-radius: ${({ theme }) => theme.borderRadius};
   width: ${({ theme, size }) => theme.defineWidth(size)};
   margin: 1rem;
-
-  @media screen and (max-width: 600px) {
-    display: revert;
-  }
 `
 
 export const StyleInput = styled.input`

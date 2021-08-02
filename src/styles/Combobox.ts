@@ -24,7 +24,7 @@ export const StyledSelect = styled.select.attrs((props: ComboboxProps) => ({
   width: ${({ theme, size }) => theme.defineWidth(size)};
 
   @media screen and (max-width: 600px) {
-    margin-top: 1rem;
+    margin: 1rem;
   }
 `
 
