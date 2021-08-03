@@ -10,7 +10,7 @@ export default createGlobalStyle`
   body { 
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    font-family:${({ theme }) => theme.fontFamily} ;
     transition: all 0.50s linear;
   }
 

@@ -12,7 +12,7 @@ const color = {
   scooter: '#36a4a8',
   gainsboro: '#E3E3E3',
   emerald: '#6CD188',
-  gray: '#ddd',
+  gray: '#b0b3c0',
 }
 
 const theme = {
@@ -46,6 +46,7 @@ const theme = {
     },
   },
   text: color.comet,
+  fontFamily: 'Tahoma',
   fontSize: {
     sm: 100,
     md: 120,
@@ -57,7 +58,7 @@ const theme = {
     md: 128,
     lg: 256,
   },
-  borderRadius: '4px',
+  borderRadius: '5px',
   defineWidth: (size: string | number | undefined) => {
     switch (size) {
       case 'sm':

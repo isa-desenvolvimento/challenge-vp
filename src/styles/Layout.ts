@@ -12,7 +12,7 @@ export const StyleContainer = styled.main`
     'sidebar contentBox';
   text-align: center;
 
-  font-family: 'Nunito';
+  font-family: ${({ theme }) => theme.fontFamily};
 
   overflow: hidden;
 

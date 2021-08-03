@@ -22,6 +22,7 @@ import { ElementProps } from '@/types/contex'
 
 import useSWR from 'swr'
 import { fetcher } from '@/services'
+import { NotFoundItem } from '@/components/NotFoundItem'
 
 // const items = [
 //   {
@@ -66,13 +67,9 @@ export default function Home() {
   const { setState } = useContext(TransactionContext)
   const { data, error } = useSWR('{ users { name } }', fetcher)
 
-  if (error) return <div>Failed to load</div>
-  if (!data) return <div>Loading...</div>
+  if (error || !data) return <NotFoundItem />
 
   const transactions = data.data
-
-  console.log('transactions', transactions)
-
   const onSubmitSearchContainer = (data: FormikValues) => {
     setState((prev: ElementProps) => ({
       ...prev,
