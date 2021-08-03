@@ -20,10 +20,16 @@ export const SearchContainer = ({
         placeholder="Pesquisa Livre"
         data-cy="search-input"
       ></InputComponent>
-      <Combobox options={options} placeholder="Status" name="status" isFormik />
+      <Combobox
+        options={options}
+        placeholder="Status"
+        name="status"
+        isFormik
+        data-cy="search-combobox"
+      />
       <StyleButtonContainer>
         <Button
-          data-cy="search-btn"
+          role="search-btn"
           type="submit"
           primary
           onClick={() => {

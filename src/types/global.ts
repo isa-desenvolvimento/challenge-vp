@@ -33,6 +33,7 @@ export type InputComponentProps = {
 }
 
 export type ButtonProps = {
+  role?: string
   iconProps?: string
   onClick: () => void
   primary?: boolean

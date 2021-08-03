@@ -3,6 +3,7 @@ import { StyleButton } from '@/styles/Button'
 import { ButtonProps } from '@/types/global'
 
 export const Button = ({
+  role,
   iconProps,
   primary,
   onClick,
@@ -14,7 +15,7 @@ export const Button = ({
 
   return (
     <StyleButton
-      role="button"
+      role={role}
       arial-label="button"
       primary={primary}
       size={size}

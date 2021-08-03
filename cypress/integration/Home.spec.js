@@ -8,16 +8,17 @@ describe('Home', () => {
 
     describe('When you visite page home', () => {
       it('Shoul navegate to home page', () => {
-        cy.visit('/')
+        cy.visit('http://localhost:3000/')
       })
     })
 
     describe('list transactions', () => {
       it('Shoul list', () => {
         cy.get('[data-cy="search-input"]').type('Transação 0')
+        cy.get('[role="combobox"]:first').click()
 
-        cy.get('[data-cy="search-btn"]').click()
-        cy.url().should('include', 'characters/rick?page=1')
+        cy.get('[role="search-btn"]').click()
+        cy.url().should('include', '/', { title: 'Transação 0', status: '' })
       })
     })
 
@@ -26,7 +27,6 @@ describe('Home', () => {
         cy.get('[role="list"]:first')
           .should('contain', 'Transação 0')
           .should('contain', 'Registro da transação 0')
-          .should('contain', 'done')
       })
     })
   })
@@ -38,26 +38,25 @@ describe('Home', () => {
 
     describe('When you visite page home', () => {
       it('Shoul navegate to home page', () => {
-        cy.visit('/')
+        cy.visit('http://localhost:3000/')
       })
     })
 
     describe('list characters', () => {
       it('Shoul list characters', () => {
-        cy.get('[data-cy="nav-input"]').type('rick')
+        cy.get('[data-cy="search-input"]').type('Transação 0')
+        cy.get('[role="combobox"]:first').click()
 
-        cy.get('[role="button"]').click()
-        cy.url().should('include', 'characters/rick?page=1')
+        cy.get('[role="search-btn"]').click()
+        cy.url().should('include', '/', { title: 'Transação 0', status: '' })
       })
     })
 
-    describe('Modal', () => {
-      it('Shoul modal character', () => {
-        cy.get('[role="item_container"]:first').click()
-        cy.get('[role="modal"]')
-          .should('contain', 'SOBRE')
-          .should('contain', 'ORIGEM')
-          .should('contain', 'LOCALIDADE')
+    describe('List', () => {
+      it('Shoul list transactions', () => {
+        cy.get('[role="list"]:first')
+          .should('contain', 'Transação 0')
+          .should('contain', 'Registro da transação 0')
       })
     })
   })
