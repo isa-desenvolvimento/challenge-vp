@@ -13,7 +13,7 @@ export const Button = ({
   const renderIcon = () => iconProps && <Icon faIcon={iconProps}></Icon>
 
   return (
-    <StyleButton onClick={onClick} primary={primary} size={size} type={type}>
+    <StyleButton primary={primary} size={size} type={type} onClick={onClick}>
       {renderIcon()}
       {children}
     </StyleButton>

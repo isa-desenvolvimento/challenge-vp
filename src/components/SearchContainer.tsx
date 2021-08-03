@@ -21,7 +21,13 @@ export const SearchContainer = ({
       ></InputComponent>
       <Combobox options={options} placeholder="Status" name="status" isFormik />
       <StyleButtonContainer>
-        <Button type="submit" primary>
+        <Button
+          type="submit"
+          primary
+          onClick={() => {
+            console.log
+          }}
+        >
           Buscar
         </Button>
       </StyleButtonContainer>

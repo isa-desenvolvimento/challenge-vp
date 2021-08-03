@@ -34,7 +34,7 @@ export type InputComponentProps = {
 
 export type ButtonProps = {
   iconProps?: string
-  onClick?: (e: EventProps) => void
+  onClick: () => void
   primary?: boolean
   children?: any | any[]
   size?: string

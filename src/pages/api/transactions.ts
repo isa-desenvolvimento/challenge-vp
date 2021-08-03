@@ -18,7 +18,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseProps>
 ) {
-  const { title, description, status } = req.query
+  //const { title, description, status } = req.query
 
   // let result
 
