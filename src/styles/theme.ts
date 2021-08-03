@@ -12,6 +12,7 @@ const color = {
   scooter: '#36a4a8',
   gainsboro: '#E3E3E3',
   emerald: '#6CD188',
+  gray: '#ddd',
 }
 
 const theme = {

@@ -7,6 +7,11 @@ const DEFAULT_VALUE: TransactionContextProps = {
     formHeader: { input: '', status: '' },
     formLists: { orderby: '' },
     form: '',
+    profile: {
+      name: 'Julia Arruda Fonseca',
+      avatar: '/avatar.png',
+      description: 'Gerente',
+    },
   },
   setState: () => {},
 }

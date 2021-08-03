@@ -22,6 +22,12 @@ export const StyleSearchContainer = styled.div`
   margin: 2rem;
 `
 export const StyleListContainer = styled.div``
+
+export const StyleHeaderFormContainer = styled.div`
+  text-align: start;
+  padding: 1rem;
+`
+
 export const StyleFormContainer = styled.div`
   @media screen and (max-width: 600px) {
     margin-top: 1rem;
@@ -32,4 +38,13 @@ export const StyleFooterContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @media screen and (max-width: 600px) {
+    position: initial;
+  }
 `

@@ -19,6 +19,10 @@ export type SizeProps = {
   size: string
 }
 
+export type WidthProps = {
+  width: string | number
+}
+
 export type InputComponentProps = {
   iconProps?: string
   placeholder?: string
@@ -30,7 +34,7 @@ export type InputComponentProps = {
 
 export type ButtonProps = {
   iconProps?: string
-  onClick?: (() => FormEvent<HTMLInputElement>) | undefined
+  onClick?: (e: EventProps) => void
   primary?: boolean
   children?: any | any[]
   size?: string
@@ -113,4 +117,13 @@ export type SearchContainerProps = {
 
 export type EventProps = {
   e: (() => FormEvent<HTMLInputElement>) | undefined
+}
+
+export type LinkAvatarProps = {
+  src: string
+  alt: string
+  width: number | string | undefined
+  height: number | string | undefined
+  title?: string
+  description?: string
 }

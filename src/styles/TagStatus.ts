@@ -23,4 +23,5 @@ export const StyleTagState = styled.div.attrs((props: TagStateProps) => ({
   transform: translate(-50%);
   width: 8rem;
   top: 0;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 12%), 0 0px 10px rgb(0 0 0 / 8%);
 `

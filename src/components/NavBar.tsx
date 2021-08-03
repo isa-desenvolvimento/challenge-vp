@@ -1,8 +1,15 @@
 import { StyleNavContainer, StyleNavItem } from '@/styles/NavBar'
 import { Icon } from '@/components/Icon'
 import { Logo } from '@/components/Logo'
+import { LinkAvatar } from '@/components/LinkAvatar'
+import React, { useContext } from 'react'
+import TransactionContext from '@/context/TransactionContext'
 
 export const NavBar = () => {
+  const { state } = useContext(TransactionContext)
+
+  console.log(state.profile)
+
   const menu = [
     {
       url: '/',
@@ -26,6 +33,14 @@ export const NavBar = () => {
     <StyleNavContainer>
       <Logo />
       {renderLink()}
+      <LinkAvatar
+        src={state?.profile.avatar}
+        title={state?.profile.name}
+        description={state?.profile.description}
+        alt="imagem do perfil"
+        width={50}
+        height={50}
+      />
     </StyleNavContainer>
   )
 }

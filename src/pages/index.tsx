@@ -5,6 +5,7 @@ import {
   StyleSearchContainer,
   StyleHomeContent,
   StyleFooterContainer,
+  StyleHeaderFormContainer,
 } from '@/styles/Home'
 
 import { Card } from '@/components/Card'
@@ -13,12 +14,11 @@ import { SearchContainer } from '@/components/SearchContainer'
 import { List } from '@/components/List'
 import { Pagination } from '@/components/Pagination'
 import { FormComponent } from '@/components/FormComponent'
-import { useContext, SyntheticEvent } from 'react'
+import React, { useContext } from 'react'
 import { FormHeaderList } from '@/components/FormHeaderList'
 import TransactionContext from '@/context/TransactionContext'
 import { FormikValues } from 'formik/dist/types'
 import { ElementProps } from '@/types/contex'
-import { EventProps } from '@/types/global'
 
 const items = [
   {
@@ -115,9 +115,11 @@ export default function Home() {
     return (
       <StyleFormContainer>
         <Card
-          header={'Título genérico'}
+          header={
+            <StyleHeaderFormContainer>Título genérico</StyleHeaderFormContainer>
+          }
           content={<FormComponent />}
-          height={'55vh'}
+          height={'50vh'}
         />
       </StyleFormContainer>
     )

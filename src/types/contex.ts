@@ -5,6 +5,7 @@ export type ElementProps = {
   }
   formLists: { orderby: string }
   form: string
+  profile: { name: string; avatar: string; description: string }
 }
 
 export type TransactionContextProps = {
