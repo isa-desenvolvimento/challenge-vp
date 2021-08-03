@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import data from './data.json'
+import data from './data'
 
 export type ItemProps = {
   id: number
@@ -10,31 +10,28 @@ export type ItemProps = {
   status: string
 }
 
-type ResponseProps = {
-  data: ItemProps[]
-}
+// type ResponseProps = {
+//   data: ItemProps[] | undefined
+// }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseProps>
-) {
-  //const { title, description, status } = req.query
+export const getAll = (req: NextApiRequest, res: NextApiResponse) => {
+  const { title, description, status } = req.query
 
-  // let result
+  let result
 
-  // switch (true) {
-  //   case title !== undefined:
-  //     result = data.data.find((item) => item.title === title)
-  //     break
-  //   case description !== undefined:
-  //     result = data.data.find((item) => item.title === title)
-  //     break
-  //   case status !== undefined:
-  //     result = data.data.filter((item) => item.status === status)
-  //     break
-  //   default:
-  //     break
-  // }
+  switch (true) {
+    case title !== undefined:
+      result = data.data.find((item) => item.title === title)
+      break
+    case description !== undefined:
+      result = data.data.find((item) => item.title === title)
+      break
+    case status !== undefined:
+      result = data.data.filter((item) => item.status === status)
+      break
+    default:
+      break
+  }
 
-  res.status(200).json(data)
+  res.status(200).json({ data: result })
 }

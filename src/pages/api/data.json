@@ -5,7 +5,7 @@
       "title": "Transação 0",
       "description": "Registro da transação 0",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Transação 1",
       "description": "Registro da transação 1",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -21,7 +21,7 @@
       "title": "Transação 2",
       "description": "Registro da transação 2",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "warning"
     },
     {
@@ -29,7 +29,7 @@
       "title": "Transação 3",
       "description": "Registro da transação 3",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -37,7 +37,7 @@
       "title": "Transação 4",
       "description": "Registro da transação 4",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "error"
     },
     {
@@ -45,7 +45,7 @@
       "title": "Transação 5",
       "description": "Registro da transação 5",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -53,7 +53,7 @@
       "title": "Transação 6",
       "description": "Registro da transação 6",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "error"
     },
     {
@@ -61,7 +61,7 @@
       "title": "Transação 7",
       "description": "Registro da transação 7",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -69,7 +69,7 @@
       "title": "Transação 8",
       "description": "Registro da transação 8",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -77,7 +77,7 @@
       "title": "Transação 9",
       "description": "Registro da transação 9",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "warning"
     },
     {
@@ -85,7 +85,7 @@
       "title": "Transação 10",
       "description": "Registro da transação 10",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "warning"
     },
     {
@@ -93,7 +93,7 @@
       "title": "Transação 11",
       "description": "Registro da transação 11",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -101,7 +101,7 @@
       "title": "Transação 12",
       "description": "Registro da transação 12",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -109,7 +109,7 @@
       "title": "Transação 13",
       "description": "Registro da transação 13",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "error"
     },
     {
@@ -117,7 +117,7 @@
       "title": "Transação 14",
       "description": "Registro da transação 14",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -125,7 +125,7 @@
       "title": "Transação 15",
       "description": "Registro da transação 15",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "warning"
     },
     {
@@ -133,7 +133,7 @@
       "title": "Transação 16",
       "description": "Registro da transação 16",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -141,7 +141,7 @@
       "title": "Transação 17",
       "description": "Registro da transação 17",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -149,7 +149,7 @@
       "title": "Transação 18",
       "description": "Registro da transação 18",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "error"
     },
     {
@@ -157,7 +157,7 @@
       "title": "Transação 19",
       "description": "Registro da transação 19",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -165,7 +165,7 @@
       "title": "Transação 20",
       "description": "Registro da transação 20",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "error"
     },
     {
@@ -173,7 +173,7 @@
       "title": "Transação 21",
       "description": "Registro da transação 21",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -181,7 +181,7 @@
       "title": "Transação 22",
       "description": "Registro da transação 22",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -189,7 +189,7 @@
       "title": "Transação 23",
       "description": "Registro da transação 23",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "warning"
     },
     {
@@ -197,7 +197,7 @@
       "title": "Transação 24",
       "description": "Registro da transação 24",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -205,7 +205,7 @@
       "title": "Transação 25",
       "description": "Registro da transação 25",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -213,7 +213,7 @@
       "title": "Transação 26",
       "description": "Registro da transação 26",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -221,7 +221,7 @@
       "title": "Transação 27",
       "description": "Registro da transação 27",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -229,7 +229,7 @@
       "title": "Transação 28",
       "description": "Registro da transação 28",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "done"
     },
     {
@@ -237,7 +237,7 @@
       "title": "Transação 29",
       "description": "Registro da transação 29",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "warning"
     },
     {
@@ -245,7 +245,7 @@
       "title": "Transação 30",
       "description": "Registro da transação 30",
       "date": "2021-07-26T00:05:36.879Z",
-      "amount": 2000.00,
+      "amount": 2000.0,
       "status": "error"
     }
   ]

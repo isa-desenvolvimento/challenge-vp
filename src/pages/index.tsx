@@ -20,32 +20,35 @@ import TransactionContext from '@/context/TransactionContext'
 import { FormikValues } from 'formik/dist/types'
 import { ElementProps } from '@/types/contex'
 
-const items = [
-  {
-    id: 15,
-    title: 'Transação 15',
-    description: 'Registro da transação 15',
-    date: '2021-07-26T00:05:36.879Z',
-    amount: 2000.0,
-    status: 'warning',
-  },
-  {
-    id: 16,
-    title: 'Transação 16',
-    description: 'Registro da transação 16',
-    date: '2021-07-26T00:05:36.879Z',
-    amount: 2000.0,
-    status: 'done',
-  },
-  {
-    id: 17,
-    title: 'Transação 17',
-    description: 'Registro da transação 17',
-    date: '2021-07-26T00:05:36.879Z',
-    amount: 2000.0,
-    status: 'done',
-  },
-]
+import useSWR from 'swr'
+import { fetcher } from '@/services'
+
+// const items = [
+//   {
+//     id: 15,
+//     title: 'Transação 15',
+//     description: 'Registro da transação 15',
+//     date: '2021-07-26T00:05:36.879Z',
+//     amount: 2000.0,
+//     status: 'warning',
+//   },
+//   {
+//     id: 16,
+//     title: 'Transação 16',
+//     description: 'Registro da transação 16',
+//     date: '2021-07-26T00:05:36.879Z',
+//     amount: 2000.0,
+//     status: 'done',
+//   },
+//   {
+//     id: 17,
+//     title: 'Transação 17',
+//     description: 'Registro da transação 17',
+//     date: '2021-07-26T00:05:36.879Z',
+//     amount: 2000.0,
+//     status: 'done',
+//   },
+// ]
 
 const options = [
   { value: 'Done', id: 1 },
@@ -61,6 +64,14 @@ const optionsHeaderList = [
 
 export default function Home() {
   const { setState } = useContext(TransactionContext)
+  const { data, error } = useSWR('{ users { name } }', fetcher)
+
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
+
+  const transactions = data.data
+
+  console.log('transactions', transactions)
 
   const onSubmitSearchContainer = (data: FormikValues) => {
     setState((prev: ElementProps) => ({
@@ -104,8 +115,8 @@ export default function Home() {
           header={
             <FormHeaderList onSubmit={setOrderBy} options={optionsHeaderList} />
           }
-          content={<List withBorder withTag items={items} />}
-          footer={<Pagination total={items.length} next={2} prev={4} />}
+          content={<List withBorder withTag items={transactions} />}
+          footer={<Pagination total={transactions.length} next={2} prev={4} />}
         />
       </StyleListContainer>
     )
