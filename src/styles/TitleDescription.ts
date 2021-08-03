@@ -5,8 +5,8 @@ export const StyletextDescriptionContainer = styled.div`
   margin: 1rem;
 `
 export const StyleTitle = styled.h5`
-  font-weight: bold;
   color: ${({ theme }) => theme.colors.text};
+  font-weight: 400;
 `
 export const StyleDescription = styled.span`
   color: ${({ theme }) => theme.pallet.gray};

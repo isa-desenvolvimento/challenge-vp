@@ -31,7 +31,7 @@ const items = [
     description: 'Registro da transação 0',
     date: '2021-07-26T00:05:36.879Z',
     amount: 2000.0,
-    status: 'Done',
+    status: 'done',
   },
   {
     id: 16,

@@ -5,9 +5,9 @@ export const StyleTagState = styled.div.attrs((props: TagStateProps) => ({
   status: props.status,
 }))<TagStateProps>`
   position: absolute;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  padding: 0rem 2rem;
+  border-bottom-left-radius: ${({ theme }) => theme.borderRadius};
+  border-bottom-right-radius: ${({ theme }) => theme.borderRadius};
+  padding: 0.1rem 2rem;
   color: ${({ theme }) => theme.pallet.white};
   background: ${({ theme, status }) => {
     switch (status) {
@@ -21,7 +21,9 @@ export const StyleTagState = styled.div.attrs((props: TagStateProps) => ({
   }};
   left: 50%;
   transform: translate(-50%);
-  width: 8rem;
+  width: 7rem;
   top: 0;
   box-shadow: 0px 2px 5px rgb(0 0 0 / 12%), 0 0px 10px rgb(0 0 0 / 8%);
+  font-size: x-small;
+  text-transform: uppercase;
 `
