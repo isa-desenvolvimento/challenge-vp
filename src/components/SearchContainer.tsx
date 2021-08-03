@@ -18,10 +18,12 @@ export const SearchContainer = ({
         name="search"
         iconProps="search"
         placeholder="Pesquisa Livre"
+        data-cy="search-input"
       ></InputComponent>
       <Combobox options={options} placeholder="Status" name="status" isFormik />
       <StyleButtonContainer>
         <Button
+          data-cy="search-btn"
           type="submit"
           primary
           onClick={() => {
