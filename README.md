@@ -24,6 +24,7 @@
 - [x]  Vercel
 - [x]  Styled-components
 - [x]  CSS-GriD
+- [x]  Apollo Server Micro 2.25.1 - Graphql
 
 ### 🏆 Aplicação [Demo](https://challenge-vp.vercel.app/)
 
@@ -67,3 +68,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Husky](https://www.husky.com.br/)
 - [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
 - [Styled-components](https://styled-components.com/)
+- [Apollo Server Micro 2.25.1](https://www.apollographql.com)
