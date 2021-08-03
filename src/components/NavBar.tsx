@@ -8,8 +8,6 @@ import TransactionContext from '@/context/TransactionContext'
 export const NavBar = () => {
   const { state } = useContext(TransactionContext)
 
-  console.log(state.profile)
-
   const menu = [
     {
       url: '/',

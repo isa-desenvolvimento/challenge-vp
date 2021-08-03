@@ -15,7 +15,7 @@ export const LinkAvatar = ({
   height,
 }: LinkAvatarProps) => {
   return (
-    <StyleNavAvatar width={width}>
+    <StyleNavAvatar width={width} role="link-avatar">
       <StyleImage src={src} alt={alt} width={width} height={height} />
       <StyleTitleDescription title={title} description={description} />
     </StyleNavAvatar>

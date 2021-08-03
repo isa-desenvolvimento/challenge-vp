@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render snapshot 1`] = `
+.c0 {
+  background: #36a4a8;
+  color: #ffff;
+  font-size: 1em;
+  margin: 1em;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  width: 10%;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.c0:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<button
+  class="c0"
+  role="button"
+  type="button"
+>
+  Test Button
+</button>
+`;

@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormComponent /> should render snapshot 1`] = `
+.c0 {
+  display: content;
+  gap: 0.4rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: start;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  background: #eceff5;
+  color: #3AA3AA;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  margin: 1rem;
+}
+
+.c3 {
+  padding: 0;
+  margin: 0;
+  color: #3AA3AA;
+  background: none;
+  border: none;
+  text-overflow: ellipsis;
+}
+
+.c1 {
+  color: #60647C;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    display: revert;
+    padding: 1rem;
+  }
+}
+
+<div
+  class="c0"
+  role="form-component"
+>
+  <label
+    class="InputComponent__StyleContainer-sc-o1q8z5-0"
+    role="input-component"
+  >
+    <label
+      class="c1"
+    >
+      Formulário genérico
+    </label>
+    <div
+      class="c2"
+      name="title"
+    >
+      <input
+        class="c3"
+        name="title"
+        placeholder="R$ 0.0"
+        role="title"
+        value=""
+      />
+    </div>
+  </label>
+  <label
+    class="InputComponent__StyleContainer-sc-o1q8z5-0"
+    role="input-component"
+  >
+    <label
+      class="c1"
+    >
+      Formulário genérico
+    </label>
+    <div
+      class="c2"
+      name="description"
+    >
+      <input
+        class="c3"
+        name="description"
+        placeholder="R$ 0.0"
+        role="description"
+        value=""
+      />
+    </div>
+  </label>
+  <label
+    class="InputComponent__StyleContainer-sc-o1q8z5-0"
+    role="input-component"
+  >
+    <label
+      class="c1"
+    >
+      Formulário genérico
+    </label>
+    <div
+      class="c2"
+      name="date"
+    >
+      <input
+        class="c3"
+        name="date"
+        placeholder="R$ 0.0"
+        role="date"
+        value=""
+      />
+    </div>
+  </label>
+</div>
+`;

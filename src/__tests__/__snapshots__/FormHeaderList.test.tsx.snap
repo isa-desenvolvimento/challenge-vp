@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormHeaderList /> should render snapshot 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  background: #eceff5;
+  color: #3AA3AA;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+}
+
+.c3 {
+  background: #eceff5;
+  color: #3AA3AA;
+}
+
+.c0 {
+  display: grid;
+  grid-auto-columns: 40%;
+}
+
+@media screen and (max-width:600px) {
+  .c2 {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    display: revert;
+    width: 100%;
+  }
+}
+
+<div
+  class="c0"
+  role="form-header-list"
+>
+  <div
+    class="c1"
+    role="combobox"
+  >
+    <select
+      class="c2"
+    >
+      <option
+        class="c3"
+        name="orderby.defaultValue"
+        value=""
+      >
+        Status
+      </option>
+      <option
+        class="c3"
+        name="orderby.Title"
+        value="Title"
+      >
+        Title
+      </option>
+      <option
+        class="c3"
+        name="orderby.Description"
+        value="Description"
+      >
+        Description
+      </option>
+      <option
+        class="c3"
+        name="orderby.Status"
+        value="Status"
+      >
+        Status
+      </option>
+    </select>
+  </div>
+</div>
+`;

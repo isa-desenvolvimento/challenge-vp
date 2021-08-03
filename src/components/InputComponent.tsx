@@ -23,11 +23,12 @@ export const InputComponent = ({
   const renderIcon = () => iconProps && <Icon faIcon={iconProps}></Icon>
 
   return (
-    <StyleContainer>
+    <StyleContainer role="input-component">
       {label && <StyleInputLabel>{label}</StyleInputLabel>}
       <StyleInputContainer size={size} primary={primary} name={name}>
         {renderIcon()}
         <StyleInput
+          role={name}
           placeholder={placeholder}
           {...meta}
           {...field}

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideBar /> should render snapshot 1`] = `
+.c0 {
+  grid-area: sidebar;
+  width: 20px;
+  height: 95vh;
+  background: #446996;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    height: auto;
+  }
+}
+
+<div
+  class="c0"
+  role="sidebar"
+/>
+`;

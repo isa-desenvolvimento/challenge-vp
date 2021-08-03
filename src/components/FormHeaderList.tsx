@@ -5,7 +5,7 @@ import { SearchContainerProps } from '@/types/global'
 
 export const FormHeaderList = ({ options, onSubmit }: SearchContainerProps) => {
   const renderBaseForm = () => (
-    <StyleHeadList>
+    <StyleHeadList role="form-header-list">
       <Combobox
         options={options}
         placeholder="Status"

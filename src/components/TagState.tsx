@@ -2,5 +2,9 @@ import { StyleTagState } from '@/styles/TagStatus'
 import { TagStateProps } from '@/types/global'
 
 export const TagState = ({ children, status }: TagStateProps) => {
-  return <StyleTagState status={status}>{children}</StyleTagState>
+  return (
+    <StyleTagState role="tag-status" status={status}>
+      {children}
+    </StyleTagState>
+  )
 }

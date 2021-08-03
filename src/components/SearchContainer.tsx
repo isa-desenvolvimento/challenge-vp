@@ -13,7 +13,7 @@ export const SearchContainer = ({
   onSubmit,
 }: SearchContainerProps) => {
   const renderBaseForm = () => (
-    <StyleSearchContainer>
+    <StyleSearchContainer role="searchContainer">
       <InputComponent
         name="search"
         iconProps="search"

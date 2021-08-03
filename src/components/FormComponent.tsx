@@ -10,7 +10,7 @@ export const FormComponent = () => {
   }
 
   const renderBaseForm = () => (
-    <StyleFormContainer>
+    <StyleFormContainer role="form-component">
       <InputComponent
         placeholder="R$ 0.0"
         name="title"

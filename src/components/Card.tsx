@@ -25,7 +25,7 @@ export const Card = ({
     footer && <StyleCardFooter primary={primary}>{footer}</StyleCardFooter>
 
   return (
-    <StyleCardContainer>
+    <StyleCardContainer role="card">
       {renderHeader()}
       {renderContent()}
       {renderFooter()}

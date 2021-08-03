@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkAvatar /> should render snapshot 1`] = `
+.c2 {
+  text-align: justify;
+  margin: 1rem;
+}
+
+.c3 {
+  font-weight: bold;
+  color: #60647C;
+}
+
+.c4 {
+  color: #ddd;
+}
+
+.c0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border-left: 1px solid #ddd;
+  margin-left: auto;
+  padding: 1rem;
+  height: 75%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  display: block;
+  border-radius: 50%;
+}
+
+<div
+  class="c0"
+  role="link-avatar"
+  width="50"
+>
+  <img
+    alt="alt"
+    class="c1"
+    height="50"
+    src="/avatar.png"
+    width="50"
+  />
+  <div
+    class="c2"
+  >
+    <h5
+      class="c3"
+    >
+      Link
+    </h5>
+    <h5
+      class="c4"
+    >
+      Description
+    </h5>
+    <h5
+      class="c4"
+    />
+  </div>
+</div>
+`;

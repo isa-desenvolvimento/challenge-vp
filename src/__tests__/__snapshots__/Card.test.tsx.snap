@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render snapshot 1`] = `
+.c0 {
+  box-shadow: 0 0 20px rgba(0,0,0,0.05),0 0px 40px rgba(0,0,0,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  overflow: hidden;
+}
+
+.c1 {
+  background: #E3E3E3;
+  padding: 0.5rem;
+}
+
+.c2 {
+  background: #ffff;
+  height: 42vh;
+  overflow-y: scroll;
+}
+
+.c3 {
+  background: #E3E3E3;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width:600px) {
+  .c0 {
+    margin-bottom: 1rem;
+  }
+}
+
+<div
+  class="c0"
+  role="card"
+>
+  <div
+    class="c1"
+  >
+    Title
+  </div>
+  <div
+    class="c2"
+  >
+    Content
+  </div>
+  <div
+    class="c3"
+  >
+    Footer
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import { StyleSidebarContainer } from '@/styles/SideBar'
 
 export const Sidebar = () => {
-  return <StyleSidebarContainer></StyleSidebarContainer>
+  return <StyleSidebarContainer role="sidebar"></StyleSidebarContainer>
 }

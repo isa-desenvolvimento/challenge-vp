@@ -4,8 +4,9 @@ import { StyleAncor } from '@/styles/LinkItem'
 
 export const LinkItem = ({ children, url }: LinkProps) => {
   return (
+    // eslint-disable-next-line @next/next/link-passhref
     <Link href={url}>
-      <StyleAncor>{children}</StyleAncor>
+      <StyleAncor role="link-item">{children}</StyleAncor>
     </Link>
   )
 }

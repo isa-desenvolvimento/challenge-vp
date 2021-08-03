@@ -8,7 +8,7 @@ import { Icon } from './Icon'
 
 export const Pagination = ({ prev, next, total }: PaginationProps) => {
   return (
-    <StylePaginationContainer>
+    <StylePaginationContainer role="pagination">
       <StylePaginationContent>
         <Icon faIcon="chevron-left"></Icon>
         <StylePaginationNumber>{`${prev} - ${next}`}</StylePaginationNumber>

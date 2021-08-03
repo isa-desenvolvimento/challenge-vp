@@ -2,5 +2,5 @@ import { StyleContainer } from '@/styles/ContentBox'
 import { ChildrenProps } from '@/types/global'
 
 export const ContentBox = ({ children }: ChildrenProps) => {
-  return <StyleContainer> {children}</StyleContainer>
+  return <StyleContainer role="contentBox"> {children}</StyleContainer>
 }
