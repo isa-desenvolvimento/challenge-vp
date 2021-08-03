@@ -35,4 +35,5 @@ export const StyleInput = styled.input`
 export const StyleInputLabel = styled.label`
   color: ${({ theme, color }) => (color ? color : theme.colors.text)};
   text-overflow: ellipsis;
+  margin-left: 10%;
 `

@@ -11,6 +11,7 @@ export const FormHeaderList = ({ options, onSubmit }: SearchContainerProps) => {
         placeholder="Status"
         name="orderby"
         onChange={onSubmit}
+        primary
       />
     </StyleHeadList>
   )

@@ -29,6 +29,7 @@
     "json-graphql-server": "^2.2.3",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
+    "moment": "^2.29.1",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -45,8 +46,11 @@
     "@commitlint/config-conventional": "^13.1.0",
     "@jest/types": "^27.0.6",
     "@next/bundle-analyzer": "^11.0.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
     "@types/react": "17.0.15",
+    "@types/react-select": "^4.0.17",
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.0.0",
@@ -59,14 +63,11 @@
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-styled-components": "^7.0.5",
     "lint-staged": "^11.1.1",
     "prettier": "^2.3.2",
-    "typescript": "4.3.5",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@types/react-select": "^4.0.17",
-    "jest-fetch-mock": "^3.0.3",
-    "jest-styled-components": "^7.0.5"
+    "typescript": "4.3.5"
   },
   "config": {
     "commitizen": {
