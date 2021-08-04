@@ -128,3 +128,7 @@ export type LinkAvatarProps = {
   title?: string
   description?: string
 }
+
+export type TransactionContextProps = {
+  data: ItemProps[] | undefined
+}

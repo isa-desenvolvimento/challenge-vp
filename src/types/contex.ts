@@ -1,3 +1,5 @@
+import { InitialProps } from './global'
+
 export type ElementProps = {
   formHeader: {
     input: string
@@ -6,6 +8,7 @@ export type ElementProps = {
   formLists: { orderby: string }
   form: string
   profile: { name: string; avatar: string; description: string }
+  list: InitialProps[]
 }
 
 export type TransactionContextProps = {

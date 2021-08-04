@@ -1,68 +1,64 @@
-// import { gql, ApolloServer } from 'apollo-server-micro'
-// import Cors from 'micro-cors'
-
-// const typeDefs = gql`
-//   type Query {
-//     transactions: [Transactions!]!
-//   }
-//   type Transactions {
-//     id: Int!
-//     title: String
-//     description: String
-//     date: String
-//     amount: Number
-//     status: String
-//   }
-// `
-
-// const resolvers = {
-//   Query: {
-//     transactions: () => {
-//       console.log('hkduhakshdk')
-//       return 'Hello'
-//     },
-//   },
-// }
-
-// const cors = Cors({ allowMethods: ['GET', 'OPTIONS'] })
-
-// const apolloServer = new ApolloServer({ typeDefs, resolvers })
-
-// const handle = apolloServer.createHandler({ path: '/api/graphql' })(req, res)
-// export const config = { api: { bodyParser: false } }
-// export default cors(handle)
-
-// // https://rickandmortyapi.com/graphql
-
 import { ApolloServer, gql } from 'apollo-server-micro'
 import data from './data.json'
 
 const typeDefs = gql`
-  type Query {
-    users: [User!]!
-  }
-  type User {
-    name: String
-  }
   type Transaction {
     id: Int!
     title: String
     description: String
     date: String
+    amount: Float
     status: String
   }
-  type Transactions {
-    data: [Transaction!]!
+
+  type Query {
+    getData: [Transaction]
+    getByStatus(status: String!): [Transaction]
+    getByString(str: String!): [Transaction]
+    order: [Transaction]
   }
 `
 
+data = data.data
+
 const resolvers = {
   Query: {
-    users(parent, args, context) {
-      return [{ name: 'Nextjs' }]
+    getData: async () => {
+      try {
+        return data
+      } catch (error) {
+        throw error
+      }
     },
-    transactions() {
-      return data
+
+    getByStatus: async (_, args) => {
+      try {
+        return data.filter((e) => {
+          return e.status == args.status
+        })
+      } catch (error) {
+        throw error
+      }
+    },
+
+    getByString: async (_, args) => {
+      try {
+        return data.filter((e) => {
+          return e.title == args.str || e.description == args.str
+        })
+      } catch (error) {
+        throw error
+      }
+    },
+
+    order: async () => {
+      try {
+        return data.sort((a, b) => {
+          return a.id < b.id ? -1 : a.id > b.id ? 1 : 0
+        })
+      } catch (error) {
+        throw error
+      }
     },
   },
 }

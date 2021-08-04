@@ -12,6 +12,7 @@ const DEFAULT_VALUE: TransactionContextProps = {
       avatar: '/avatar.png',
       description: 'Gerente',
     },
+    list: [],
   },
   setState: () => {},
 }
