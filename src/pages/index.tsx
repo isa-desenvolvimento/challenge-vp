@@ -22,6 +22,7 @@ import { FormikValues } from 'formik/dist/types'
 import { ElementProps } from '@/types/contex'
 import {
   getByStatus,
+  getByStatusSearch,
   getByString,
   getData,
   order,
@@ -154,6 +155,16 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   let data: ItemProps[]
   switch (true) {
+    case search !== undefined && status !== undefined:
+      data = await getByStatusSearch(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        status?.toLowerCase(),
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        search?.toLowerCase()
+      )
+      break
     case search !== undefined:
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore

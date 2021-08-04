@@ -16,6 +16,7 @@ const typeDefs = gql`
     getByStatus(status: String!): [Transaction]
     getByString(str: String!): [Transaction]
     order: [Transaction]
+    getByStatusSearch(status: String!, desc: String!): [Transaction]
   }
 `
 
@@ -47,6 +48,20 @@ const resolvers = {
           return (
             e.title.indexOf(args.str) !== -1 ||
             e.description.indexOf(args.str) !== -1
+          )
+        })
+      } catch (error) {
+        throw error
+      }
+    },
+
+    getByStatusSearch: async (_, args) => {
+      try {
+        return data.filter((e) => {
+          return (
+            e.status === args.status &&
+            (e.title.indexOf(args.desc) != -1 ||
+              e.description.indexOf(args.desc) != -1)
           )
         })
       } catch (error) {

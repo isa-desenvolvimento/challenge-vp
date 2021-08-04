@@ -1,5 +1,6 @@
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 
+//'http://localhost:3000/api/graphql'
 const client = new ApolloClient({
   uri: 'http://localhost:3000/api/graphql',
   cache: new InMemoryCache(),
@@ -79,4 +80,23 @@ export const getData = async () => {
   })
 
   return data.getData
+}
+
+export const getByStatusSearch = async (status: string, desc: string) => {
+  const { data } = await client.query({
+    query: gql`
+      query {
+        getByStatusSearch(status: "${status}", desc:"${desc}"){
+          id
+          title
+          description
+          date
+          amount
+          status
+        }
+      }
+    `,
+  })
+
+  return data.getByStatusSearch
 }

@@ -40,7 +40,7 @@ describe('Home', () => {
 
     describe('List check', () => {
       it('Shoul list transactions', () => {
-        cy.get('[role="list"]:first').should('contain', 'Transação 9')
+        cy.get('[role="list"]:eq(1)').should('contain', 'Transação 9')
       })
     })
   })
