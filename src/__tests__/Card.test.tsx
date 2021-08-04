@@ -17,7 +17,7 @@ describe('<Card />', () => {
   it('should render the styled-components card', () => {
     expect(screen.getByRole(/card/i)).toHaveStyle({
       'box-shadow': '0 0 20px rgba(0,0,0,0.05),0 0px 40px rgba(0,0,0,0.08)',
-      'border-radius': '4px',
+      'border-radius': '5px',
       overflow: 'hidden',
       'text-align': 'center',
     })

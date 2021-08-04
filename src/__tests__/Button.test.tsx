@@ -27,7 +27,7 @@ describe('<Button />', () => {
       'font-size': '1em',
       margin: '1em',
       border: 'none',
-      'border-radius': '4px',
+      'border-radius': '5px',
       padding: '0.8em 2em',
       width: '10%',
       'text-transform': 'uppercase',

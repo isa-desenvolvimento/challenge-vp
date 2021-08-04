@@ -21,21 +21,13 @@ describe('<FormHeaderList />', () => {
     expect(screen.getByRole(/form-header-list/i).textContent).toBeTruthy()
   })
 
-  // it('should render the styled-components tag-status', () => {
-  //   expect(screen.getByRole(/tag-status/i)).toHaveStyle({
-  //     background: '#36a4a8',
-  //     color: '#ffff',
-  //     'font-size': '1em',
-  //     margin: '1em',
-  //     border: 'none',
-  //     'border-radius': '4px',
-  //     padding: '0.8em 2em',
-  //     width: '10%',
-  //     'text-transform': 'uppercase',
-  //     'text-overflow': 'ellipsis',
-  //     cursor: 'pointer',
-  //   })
-  // })
+  it('should render the styled-components tag-status', () => {
+    expect(screen.getByRole(/form-header-list/i)).toHaveStyle({
+      display: 'grid',
+      'grid-auto-columns': '40%',
+      padding: '0.5rem',
+    })
+  })
 
   it('should render snapshot', () => {
     expect(screen.getByRole(/form-header-list/i)).toMatchSnapshot()

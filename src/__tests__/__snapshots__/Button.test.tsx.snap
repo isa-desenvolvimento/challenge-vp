@@ -7,7 +7,7 @@ exports[`<Button /> should render snapshot 1`] = `
   font-size: 1em;
   margin: 1em;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 0.8em 2em;
   width: 10%;
   text-transform: uppercase;
@@ -27,7 +27,6 @@ exports[`<Button /> should render snapshot 1`] = `
 
 <button
   class="c0"
-  role="button"
   type="button"
 >
   Test Button

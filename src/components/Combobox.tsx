@@ -17,7 +17,13 @@ export const Combobox = ({
   const renderSelection = () => {
     if (isFormik) {
       return (
-        <StyledSelect primary={primary} {...field} {...meta} role={role}>
+        <StyledSelect
+          primary={primary}
+          {...field}
+          {...meta}
+          role={role}
+          defaultValue="null"
+        >
           <StyledOption selected value="" name={`${name}.defaultValue`}>
             {placeholder}
           </StyledOption>
@@ -28,7 +34,7 @@ export const Combobox = ({
 
     return (
       <StyledSelect onChange={onChange} primary={primary}>
-        <StyledOption selected value="" name={`${name}.defaultValue`}>
+        <StyledOption selected value=" " name={`${name}.defaultValue`}>
           {placeholder}
         </StyledOption>
         {renderOptions()}

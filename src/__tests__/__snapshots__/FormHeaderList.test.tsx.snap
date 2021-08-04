@@ -27,10 +27,10 @@ exports[`<FormHeaderList /> should render snapshot 1`] = `
   gap: 1rem;
   padding: 1rem;
   text-overflow: ellipsis;
-  background: #eceff5;
+  background: #ffff;
   color: #3AA3AA;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   width: auto;
 }
 
@@ -42,6 +42,7 @@ exports[`<FormHeaderList /> should render snapshot 1`] = `
 .c0 {
   display: grid;
   grid-auto-columns: 40%;
+  padding: 0.5rem;
 }
 
 @media screen and (max-width:600px) {
@@ -71,7 +72,7 @@ exports[`<FormHeaderList /> should render snapshot 1`] = `
       <option
         class="c3"
         name="orderby.defaultValue"
-        value=""
+        value=" "
       >
         Status
       </option>

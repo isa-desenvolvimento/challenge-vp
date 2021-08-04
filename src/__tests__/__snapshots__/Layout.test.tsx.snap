@@ -54,21 +54,24 @@ exports[`<Layout /> should render snapshot 1`] = `
 .c5 {
   text-align: justify;
   margin: 1rem;
+  display: grid;
+  grid-gap: 0.3rem;
 }
 
 .c6 {
-  font-weight: bold;
   color: #60647C;
+  font-weight: 400;
 }
 
 .c7 {
-  color: #ddd;
+  color: #b0b3c0;
+  font-size: 0.8rem;
 }
 
 .c3 {
   background-color: transparent;
   box-sizing: border-box;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #b0b3c0;
   margin-left: auto;
   padding: 1rem;
   height: 75%;
@@ -101,7 +104,7 @@ exports[`<Layout /> should render snapshot 1`] = `
   grid-template-columns: 1rem auto;
   grid-template-areas: 'nav nav' 'sidebar contentBox';
   text-align: center;
-  font-family: 'Nunito';
+  font-family: Tahoma;
   overflow: hidden;
 }
 
@@ -193,12 +196,12 @@ exports[`<Layout /> should render snapshot 1`] = `
         >
           Julia Arruda Fonseca
         </h5>
-        <h5
+        <span
           class="c7"
         >
           Gerente
-        </h5>
-        <h5
+        </span>
+        <span
           class="c7"
         />
       </div>

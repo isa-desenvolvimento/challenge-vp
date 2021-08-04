@@ -36,32 +36,37 @@ exports[`<List /> should render snapshot 1`] = `
 
 .c4 {
   position: absolute;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  padding: 0rem 2rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.1rem 2rem;
   color: #ffff;
   background: #6CD188;
   left: 50%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
-  width: 8rem;
+  width: 7rem;
   top: 0;
   box-shadow: 0px 2px 5px rgb(0 0 0 / 12%),0 0px 10px rgb(0 0 0 / 8%);
+  font-size: x-small;
+  text-transform: uppercase;
 }
 
 .c1 {
   text-align: justify;
   margin: 1rem;
+  display: grid;
+  grid-gap: 0.3rem;
 }
 
 .c2 {
-  font-weight: bold;
   color: #60647C;
+  font-weight: 400;
 }
 
 .c3 {
-  color: #ddd;
+  color: #b0b3c0;
+  font-size: 0.8rem;
 }
 
 <div
@@ -76,16 +81,16 @@ exports[`<List /> should render snapshot 1`] = `
     >
       List
     </h5>
-    <h5
+    <span
       class="c3"
     >
       List
-    </h5>
-    <h5
+    </span>
+    <span
       class="c3"
     >
-      2016-02-12
-    </h5>
+      02/11/2016 - 10:00 PM 
+    </span>
   </div>
   <div
     class="c4"

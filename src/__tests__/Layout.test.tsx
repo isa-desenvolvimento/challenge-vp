@@ -18,11 +18,14 @@ describe('<Layout />', () => {
 
   it('should render the styled-components Layout', () => {
     expect(screen.getByRole(/layout/i)).toHaveStyle({
-      'grid-area': 'contentBox',
+      'max-height': '100vh',
+      display: 'grid',
+      'grid-template-rows': '4rem auto',
+      'grid-template-columns': '1rem auto',
+      'grid-template-areas': "'nav nav' 'sidebar contentBox'",
+      'text-align': 'center',
+      'font-family': 'Tahoma',
       overflow: 'hidden',
-      width: '100%',
-      height: '100%',
-      background: '#eff0f6',
     })
   })
 
