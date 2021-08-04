@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   StyleFormContainer,
   StyleHomeContainer,
@@ -20,13 +19,15 @@ import { useContext } from 'react'
 import { FormHeaderList } from '@/components/FormHeaderList'
 import TransactionContext from '@/context/TransactionContext'
 import { FormikValues } from 'formik/dist/types'
-import { ElementProps, TransactionContextProps } from '@/types/contex'
+import { ElementProps } from '@/types/contex'
 import {
   getByStatus,
   getByString,
   getData,
   order,
 } from '@/services/transactions'
+import { GetServerSideProps } from 'next'
+import { ItemProps } from '@/types/global'
 
 const options = [
   { value: 'Done', id: 1 },
@@ -40,7 +41,11 @@ const optionsHeaderList = [
   { value: 'Status', id: 3 },
 ]
 
-export default function Home({ transactions }: TransactionContextProps) {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
+export default function Home({ transactions }) {
+  console.log(typeof transactions)
+
   const { setState } = useContext(TransactionContext)
   const router = useRouter()
 
@@ -144,19 +149,25 @@ export default function Home({ transactions }: TransactionContextProps) {
   )
 }
 
-export async function getServerSideProps({ query }: any) {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { search, status, orderby } = await query
 
-  let data
+  let data: ItemProps[]
   switch (true) {
     case search !== undefined:
-      data = await getByString(search.toLowerCase())
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
+      data = await getByString(search?.toLowerCase())
       break
     case status !== undefined:
-      data = await getByStatus(status.toLowerCase())
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
+      data = await getByStatus(status?.toLowerCase())
       break
     case orderby !== undefined:
-      data = await order(orderby.toLowerCase())
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-ignore
+      data = await order(orderby?.toLowerCase())
       break
     default:
       data = await getData()

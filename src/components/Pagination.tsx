@@ -4,7 +4,6 @@ import {
   StylePaginationContent,
 } from '@/styles/Pagination'
 import { PaginationProps } from '@/types/global'
-import { Icon } from './Icon'
 
 export const Pagination = ({ total }: PaginationProps) => {
   return (
