@@ -44,7 +44,10 @@ const resolvers = {
     getByString: async (_, args) => {
       try {
         return data.filter((e) => {
-          return e.title == args.str || e.description == args.str
+          return (
+            e.title.indexOf(args.str) !== -1 ||
+            e.description.indexOf(args.str) !== -1
+          )
         })
       } catch (error) {
         throw error
