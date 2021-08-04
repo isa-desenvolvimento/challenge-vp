@@ -9,16 +9,16 @@ describe('Home', () => {
     describe('When you visite page home', () => {
       it('Shoul navegate to home page', () => {
         cy.visit('http://localhost:3000/')
+        expect(cy.get('[role="link-avatar"]')).to.exist
       })
     })
 
-    describe('list transactions', () => {
+    describe('list transactions search title', () => {
       it('Shoul list', () => {
-        cy.get('[data-cy="search-input"]').type('Transação 0')
-        cy.get('[role="combobox"]:first').click()
+        cy.get('[data-cy="search-input"]').type('Transação')
 
         cy.get('[role="search-btn"]').click()
-        cy.url().should('include', '/', { title: 'Transação 0', status: '' })
+        cy.url().should('include', '/', { search: 'Transação 0' })
       })
     })
 
@@ -27,6 +27,20 @@ describe('Home', () => {
         cy.get('[role="list"]:first')
           .should('contain', 'Transação 0')
           .should('contain', 'Registro da transação 0')
+      })
+    })
+
+    describe('list transactions search status', () => {
+      it('Shoul list transactions', () => {
+        cy.get('[role="search-combobox"]').select('Warning')
+        cy.get('[role="search-btn"]').click()
+        cy.url().should('include', '/', { status: 'Warning' })
+      })
+    })
+
+    describe('List check', () => {
+      it('Shoul list transactions', () => {
+        cy.get('[role="list"]:first').should('contain', 'Transação 9')
       })
     })
   })

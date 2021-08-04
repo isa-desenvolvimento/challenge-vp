@@ -19,7 +19,6 @@ export const StyleCardHeader = styled.div.attrs((props: CardProps) => ({
 }))<CardProps>`
   background: ${({ theme, primary }) =>
     primary ? theme.pallet.gainsboro : theme.pallet.white};
-  padding: 0.5rem;
 `
 
 export const StyleCardContent = styled.div.attrs((props: CardProps) => ({

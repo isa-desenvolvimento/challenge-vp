@@ -25,7 +25,7 @@ export const SearchContainer = ({
         placeholder="Status"
         name="status"
         isFormik
-        data-cy="search-combobox"
+        role="search-combobox"
       />
       <StyleButtonContainer>
         <Button

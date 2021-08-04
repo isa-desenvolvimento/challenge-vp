@@ -48,6 +48,7 @@ export type ControlComboBoxProps = {
 }
 
 export type ComboboxProps = {
+  role?: string
   options?: OptionsProps[]
   placeholder?: string
   primary?: boolean

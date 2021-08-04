@@ -1,5 +1,2 @@
 export const formatMoeda = (atual: number | string | undefined) =>
-  atual &&
-  atual
-    .toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
-    .replace('.', ',')
+  atual && atual.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })

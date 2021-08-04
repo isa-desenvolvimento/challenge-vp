@@ -6,16 +6,12 @@ import {
 import { PaginationProps } from '@/types/global'
 import { Icon } from './Icon'
 
-export const Pagination = ({ prev, next, total }: PaginationProps) => {
+export const Pagination = ({ total }: PaginationProps) => {
   return (
     <StylePaginationContainer role="pagination">
       <StylePaginationContent>
-        <Icon faIcon="chevron-left"></Icon>
-        <StylePaginationNumber>{`${prev} - ${next}`}</StylePaginationNumber>
-        <Icon faIcon="chevron-right"></Icon>
+        <StylePaginationNumber>{` Total ${total} registros`}</StylePaginationNumber>
       </StylePaginationContent>
-
-      <span>{`de ${total}`}</span>
     </StylePaginationContainer>
   )
 }

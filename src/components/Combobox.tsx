@@ -4,6 +4,7 @@ import { DropdownWrapper, StyledSelect, StyledOption } from '@/styles/Combobox'
 import { useField } from 'formik'
 
 export const Combobox = ({
+  role,
   options,
   placeholder,
   primary,
@@ -16,7 +17,7 @@ export const Combobox = ({
   const renderSelection = () => {
     if (isFormik) {
       return (
-        <StyledSelect primary={primary} {...field} {...meta} role="combobox">
+        <StyledSelect primary={primary} {...field} {...meta} role={role}>
           <StyledOption selected value="" name={`${name}.defaultValue`}>
             {placeholder}
           </StyledOption>

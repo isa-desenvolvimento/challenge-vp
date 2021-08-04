@@ -102,7 +102,7 @@ export default function Home({ transactions }: TransactionContextProps) {
             <FormHeaderList onSubmit={setOrderBy} options={optionsHeaderList} />
           }
           content={<List withBorder withTag items={transactions} />}
-          footer={<Pagination total={transactions.length} next={2} prev={4} />}
+          footer={<Pagination total={transactions.length} />}
         />
       </StyleListContainer>
     )
@@ -116,7 +116,7 @@ export default function Home({ transactions }: TransactionContextProps) {
             <StyleHeaderFormContainer>Título genérico</StyleHeaderFormContainer>
           }
           content={<FormComponent />}
-          height={'50vh'}
+          height={'51vh'}
         />
       </StyleFormContainer>
     )
