@@ -15,7 +15,7 @@ const typeDefs = gql`
     getData: [Transaction]
     getByStatus(status: String!): [Transaction]
     getByString(str: String!): [Transaction]
-    order: [Transaction]
+    order(param: String!): [Transaction]
     getByStatusSearch(status: String!, desc: String!): [Transaction]
   }
 `
@@ -69,16 +69,49 @@ const resolvers = {
       }
     },
 
-    order: async () => {
-      try {
-        return data.sort((a, b) => {
-          return a.id < b.id ? -1 : a.id > b.id ? 1 : 0
-        })
-      } catch (error) {
-        throw error
+    order: async (_, args) => {
+      switch (args.param.toLowerCase()) {
+        case 'title':
+          return data.sort(compareTitle)
+        case 'description':
+          return data.sort(compareDescription)
+        case 'status':
+          return data.sort(compareStatus)
+        default:
+          return data
       }
     },
   },
+}
+
+const compareTitle = (a, b) => {
+  if (a.title < b.title) {
+    return -1
+  }
+  if (a.title > b.title) {
+    return 1
+  }
+  return 0
+}
+
+const compareDescription = (a, b) => {
+  if (a.description < b.description) {
+    return -1
+  }
+  if (a.description > b.description) {
+    return 1
+  }
+  return 0
+}
+
+const compareStatus = (a, b) => {
+  if (a.status < b.status) {
+    return -1
+  }
+  if (a.status > b.status) {
+    return 1
+  }
+  return 0
 }
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers })

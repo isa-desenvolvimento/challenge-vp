@@ -48,7 +48,7 @@ export const order = async (orderBy: string) => {
   const { data } = await client.query({
     query: gql`
       query {
-        order(${orderBy}) {
+        order(param: "${orderBy}") {
           id
           title
           description
@@ -64,6 +64,8 @@ export const order = async (orderBy: string) => {
 }
 
 export const getData = async () => {
+  console.log(process.env.URI)
+
   const { data } = await client.query({
     query: gql`
       query {
