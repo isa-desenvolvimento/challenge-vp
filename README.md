@@ -26,7 +26,6 @@
 - [x]  CSS-GriD
 - [x]  Apollo Server Micro 2.25.1 - Graphql
 
-### 🏆 Aplicação [Demo](https://challenge-vp.vercel.app/)
 
 ### Pré-requisitos
 
